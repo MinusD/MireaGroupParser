@@ -12,7 +12,7 @@ class Parser:
         self.groups: set = set()
 
     def _parse(self) -> None:
-        """Парсит файл распределением"""
+        """Парсит файл с распределением"""
         book = openpyxl.load_workbook(INPUT_FILE_NAME)
         sheet = book.active
         num_rows = sheet.max_row
@@ -21,7 +21,7 @@ class Parser:
                               sheet.cell(column=3, row=i).value])
             self.groups.add(sheet.cell(column=3, row=i).value)
 
-    def generate_file(self, filename: str = OUTPUT_FILE_NAME):
+    def generate_file(self, filename: str = OUTPUT_FILE_NAME) -> None:
         """Генерируем файл с группами"""
         with open(OUTPUT_FILE_NAME, 'w') as f:
             self._parse()
