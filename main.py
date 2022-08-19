@@ -23,7 +23,7 @@ class Parser:
 
     def generate_file(self, filename: str = OUTPUT_FILE_NAME) -> None:
         """Генерируем файл с группами"""
-        with open(OUTPUT_FILE_NAME, 'w') as f:
+        with open(OUTPUT_FILE_NAME, 'w', encoding="utf-8") as f:
             self._parse()
             groups = sorted(list(self.groups))
             for group in groups:
