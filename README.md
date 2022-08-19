@@ -15,7 +15,7 @@ pip install openpyxl
 
 ### [Лицензия](./LICENSE)
 
-## [RU] Profile distribution parser
+## [EU] Profile distribution parser
 
 Before starting, you need to install the library
 ```shell
